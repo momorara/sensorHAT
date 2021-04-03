@@ -3,7 +3,7 @@
 
 @reboot sudo pigpiod
 
-#@reboot python3 /home/pi/sensorHAT/irrp_data_code03.py   >irrp_data_code03_log.txt 2>&1
+@reboot python3 /home/pi/sensorHAT/irrp_data_code04.py   >irrp_data_code04_log.txt 2>&1
 
 
 # 使っていないセンサーはコメントとしてください。
