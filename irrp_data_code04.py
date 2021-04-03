@@ -42,7 +42,7 @@ irrp_data_code04.py
 2020/10/11  iR受信時にピープ音を鳴らす
 2021/03/14  LED,LED1のgpio設定が抜けていた
 2021/03/30  sensorHAT用に改造
-   04       リモコンふぁぃるを持たずにコードを表示
+   04       リモコンファイルを持たずにコードを表示
 
 
 
@@ -71,7 +71,7 @@ import getpass
 # ユーザー名を取得
 user_name = getpass.getuser()
 print('user_name',user_name)
-path = '/home/' + user_name + '/sonsorHAT/' # cronで起動する際には絶対パスが必要
+path = '/home/' + user_name + '/sensorHAT/' # cronで起動する際には絶対パスが必要
 # path = '/home/' + 'tk' + '/L_remocon/' # systemdで起動する際にはrootになり絶対パスが必要
 
 disp_size = 32 # or 64
