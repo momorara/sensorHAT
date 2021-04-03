@@ -48,14 +48,14 @@ instance = Lib_dht11.DHT11(pin=25)
 n_kai = 0
 temp_s = ''
 humdy_s = ''
-temp  = -1
-humdy = -1
+temp  = -99
+humdy = -99
 try:
-    while temp == -1 and humdy == -1:
+    while temp == -99 and humdy == -99:
         time.sleep(2.5)
         
-        temp  = -1
-        humdy = -1
+        temp  = -99
+        humdy = -99
         n_kai += 1
 
         result = instance.read()
@@ -74,8 +74,8 @@ try:
         # 
         print(n_kai,temp,humdy)
 
-        #20回を超えたらプログラム終了 データ欠損
-        if n_kai > 15:
+        #11回を超えたらプログラム終了 データ欠損 = 30秒
+        if n_kai > 11:
             dt_now = datetime.datetime.now()
             s = "摂氏: {0:.1f}"
             ################## temp ###################

@@ -9,10 +9,11 @@ BMP180_dataSave.py  python2で実行のこと
 by.kawabata
 2021/03/07  作成
 2021/03/11  調整  
-2021/03/13  温度データをファィルに書き込む
+2021/03/13  温度データをファィルに書き込む 使用しないので、コメントとする
 
 scp -r sensorHAT pi@192.168.68.126:/home/pi
 scp -r sensorHAT pi@192.168.68.108:/home/pi
+scp -r sensorHAT/*.py pi@192.168.68.126:/home/pi/sensorHAT
 """
 
 import datetime
@@ -55,11 +56,11 @@ with open(path + 'press_data_last.txt', mode='w') as f:
 # DHT11が正常な場合は、DHT11により上書きされたデータが使用される。
 ################## press ###################
 # # 最新のデータを一つだけ入れたファイルを作る
-temp_s = str(dt_now) + "  :" + str(temp) + '\n' 
-with open(path + 'temp_data.txt', mode='a') as f:
-    f.write(temp_s)
-with open(path + 'temp_data_last.txt', mode='w') as f:
-    temp = int(temp * 10)
-    temp_s = str(temp)
-    f.write(temp_s)
+# temp_s = str(dt_now) + "  :" + str(temp) + '\n' 
+# with open(path + 'temp_data.txt', mode='a') as f:
+#     f.write(temp_s)
+# with open(path + 'temp_data_last.txt', mode='w') as f:
+#     temp = int(temp * 10)
+#     temp_s = str(temp)
+#     f.write(temp_s)
 #####################################
