@@ -71,7 +71,7 @@ import getpass
 # ユーザー名を取得
 user_name = getpass.getuser()
 print('user_name',user_name)
-path = '/home/' + user_name + '/L_remocon/' # cronで起動する際には絶対パスが必要
+path = '/home/' + user_name + '/sensorHAT/' # cronで起動する際には絶対パスが必要
 # path = '/home/' + 'tk' + '/L_remocon/' # systemdで起動する際にはrootになり絶対パスが必要
 
 disp_size = 32 # or 64
