@@ -1,0 +1,3683 @@
+[
+    {
+        "id": "c1fbfd2b.c61d1",
+        "type": "tab",
+        "label": "LED+SW-03",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b0a69d1b.38d5e",
+        "type": "tab",
+        "label": "距離測定",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9a034a8c.ba9a58",
+        "type": "tab",
+        "label": "センサー測定",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e7701550.2a9938",
+        "type": "tab",
+        "label": "赤外線リモコン受信",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a757053b.5f7438",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "c396bec2.67068",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c396bec2.67068",
+        "type": "ui_tab",
+        "name": "LED+SW",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6a4bc4afa39c1f88",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED ダッシュボード",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "27b1033b.cf626c",
+        "type": "ui_group",
+        "name": "距離測定",
+        "tab": "4626b6cb.992308",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4626b6cb.992308",
+        "type": "ui_tab",
+        "name": "SR04",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fbd4bf9a.0a02c",
+        "type": "ui_group",
+        "name": "センサー表示",
+        "tab": "f079db6e.3eb6a8",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "724182e9.49bcdc",
+        "type": "mqtt-broker",
+        "name": "Free Public MQTT 5 Broker Server",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "tls": "2e3bc5cf.2d783a",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f079db6e.3eb6a8",
+        "type": "ui_tab",
+        "name": "センサー測定",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2e3bc5cf.2d783a",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true
+    },
+    {
+        "id": "d0ddd7c4.f67588",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "82af5ff3.61c89",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "82af5ff3.61c89",
+        "type": "ui_tab",
+        "name": "簡易リモコン",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1f166b88fc9fae4f",
+        "type": "ui_tab",
+        "name": "ADC",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "20d5ca7b2093199d",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "1f166b88fc9fae4f",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "6907d453.6cadfc",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "da00e0ea.01fff",
+        "order": 1,
+        "disp": true,
+        "width": 7
+    },
+    {
+        "id": "da00e0ea.01fff",
+        "type": "ui_tab",
+        "name": "赤外線受信",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f11cb89c.6519f8",
+        "type": "rpi-gpio in",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pin": "6",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "fc73c3a3.e172e"
+            ]
+        ]
+    },
+    {
+        "id": "a956e333.ba26b",
+        "type": "rpi-gpio out",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pin": "27",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 900,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7a5b2644.a84898",
+        "type": "inject",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 690,
+        "y": 160,
+        "wires": [
+            [
+                "a956e333.ba26b"
+            ]
+        ]
+    },
+    {
+        "id": "b7759cc9.38eaa",
+        "type": "inject",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "a956e333.ba26b"
+            ]
+        ]
+    },
+    {
+        "id": "376283f5.615cfc",
+        "type": "ui_button",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "group": "a757053b.5f7438",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "1-LED off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "43900ec.6dde2f"
+            ]
+        ]
+    },
+    {
+        "id": "93296e26.e938c",
+        "type": "ui_button",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "group": "a757053b.5f7438",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "1-LED on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "43900ec.6dde2f"
+            ]
+        ]
+    },
+    {
+        "id": "beb44836.413b78",
+        "type": "ui_switch",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "label": "switch-1",
+        "tooltip": "",
+        "group": "a757053b.5f7438",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 720,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc73c3a3.e172e",
+        "type": "switch",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "1b4ee4b3.f74e0b"
+            ],
+            [
+                "6aced71c.7c3848"
+            ]
+        ]
+    },
+    {
+        "id": "1b4ee4b3.f74e0b",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 560,
+        "wires": [
+            [
+                "beb44836.413b78"
+            ]
+        ]
+    },
+    {
+        "id": "6aced71c.7c3848",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "beb44836.413b78"
+            ]
+        ]
+    },
+    {
+        "id": "43900ec.6dde2f",
+        "type": "delay",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "a956e333.ba26b"
+            ]
+        ]
+    },
+    {
+        "id": "6d27ea08.32ed24",
+        "type": "rpi-gpio out",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pin": "17",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 900,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "61fb7c12.694954",
+        "type": "inject",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "6d27ea08.32ed24"
+            ]
+        ]
+    },
+    {
+        "id": "84234f12.7b9b9",
+        "type": "inject",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 690,
+        "y": 300,
+        "wires": [
+            [
+                "6d27ea08.32ed24"
+            ]
+        ]
+    },
+    {
+        "id": "dd9ee670.afb088",
+        "type": "ui_button",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "group": "a757053b.5f7438",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "2-LED off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "fa35ff43.41b8f"
+            ]
+        ]
+    },
+    {
+        "id": "8636c3bf.9055a",
+        "type": "ui_button",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "group": "a757053b.5f7438",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "2-LED on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "fa35ff43.41b8f"
+            ]
+        ]
+    },
+    {
+        "id": "fa35ff43.41b8f",
+        "type": "delay",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "6d27ea08.32ed24"
+            ]
+        ]
+    },
+    {
+        "id": "2afbfcae.c700d4",
+        "type": "inject",
+        "z": "c1fbfd2b.c61d1",
+        "name": "起動時",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "3868fdd2.14c3a2"
+            ]
+        ]
+    },
+    {
+        "id": "3868fdd2.14c3a2",
+        "type": "template",
+        "z": "c1fbfd2b.c61d1",
+        "name": "初期値 off 設定",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "43900ec.6dde2f",
+                "fa35ff43.41b8f"
+            ]
+        ]
+    },
+    {
+        "id": "a826b175.c34be",
+        "type": "rpi-gpio in",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pin": "5",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 190,
+        "y": 660,
+        "wires": [
+            [
+                "74410749.8ad2c8"
+            ]
+        ]
+    },
+    {
+        "id": "781857d1.348e98",
+        "type": "ui_switch",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "label": "switch-2",
+        "tooltip": "",
+        "group": "a757053b.5f7438",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 720,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74410749.8ad2c8",
+        "type": "switch",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "5bca86af.cbd578"
+            ],
+            [
+                "36731234.ba94ee"
+            ]
+        ]
+    },
+    {
+        "id": "5bca86af.cbd578",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 640,
+        "wires": [
+            [
+                "781857d1.348e98"
+            ]
+        ]
+    },
+    {
+        "id": "36731234.ba94ee",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 680,
+        "wires": [
+            [
+                "781857d1.348e98"
+            ]
+        ]
+    },
+    {
+        "id": "dbcdc76d.0cfc78",
+        "type": "ui_slider",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "label": "点滅回数",
+        "tooltip": "",
+        "group": "a757053b.5f7438",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "1",
+        "max": 10,
+        "step": 1,
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "47157d4.9b77684"
+            ]
+        ]
+    },
+    {
+        "id": "47157d4.9b77684",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "set LED_n",
+        "rules": [
+            {
+                "t": "set",
+                "p": "LED_n",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b23c1cdb.4f8b5",
+        "type": "ui_button",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "group": "a757053b.5f7438",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "1-LED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "dd0d4953.9d48b8"
+            ]
+        ]
+    },
+    {
+        "id": "c68c44e1.bc1d78",
+        "type": "exec",
+        "z": "c1fbfd2b.c61d1",
+        "command": "python3 /home/pi/sensorHAT/breathing_led_sensorHAT.py -LED 27 -start 0 -step 5 ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 950,
+        "y": 420,
+        "wires": [
+            [
+                "15bc2d17.c8df23"
+            ],
+            [
+                "15bc2d17.c8df23"
+            ],
+            [
+                "15bc2d17.c8df23"
+            ]
+        ]
+    },
+    {
+        "id": "dd0d4953.9d48b8",
+        "type": "template",
+        "z": "c1fbfd2b.c61d1",
+        "name": "回数をセット",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "-stop {{flow.LED_n}}",
+        "output": "str",
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "c68c44e1.bc1d78"
+            ]
+        ]
+    },
+    {
+        "id": "fae2c7c2.ccac38",
+        "type": "ui_button",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "group": "a757053b.5f7438",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "2-LED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "33c610c9.2fc18"
+            ]
+        ]
+    },
+    {
+        "id": "ad153f16.482f5",
+        "type": "exec",
+        "z": "c1fbfd2b.c61d1",
+        "command": "python3 /home/pi/sensorHAT/breathing_led_sensorHAT.py -LED 17 -start 0 -step 5 ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 950,
+        "y": 480,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "33c610c9.2fc18",
+        "type": "template",
+        "z": "c1fbfd2b.c61d1",
+        "name": "回数をセット",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "-stop {{flow.LED_n}}",
+        "output": "str",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "ad153f16.482f5"
+            ]
+        ]
+    },
+    {
+        "id": "15bc2d17.c8df23",
+        "type": "debug",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "6c23dc95.47c104",
+        "type": "rpi-gpio in",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pin": "21",
+        "intype": "down",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 200,
+        "y": 780,
+        "wires": [
+            [
+                "25ce9cb9.7cd534"
+            ]
+        ]
+    },
+    {
+        "id": "25ce9cb9.7cd534",
+        "type": "switch",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [
+                "5fb5a02d.51d45"
+            ],
+            [
+                "e0fc8f35.2e208"
+            ]
+        ]
+    },
+    {
+        "id": "5fb5a02d.51d45",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "明るい",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 760,
+        "wires": [
+            [
+                "7bc50211.98b8ec",
+                "fe68f81e.9c84c8"
+            ]
+        ]
+    },
+    {
+        "id": "e0fc8f35.2e208",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "暗い",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 800,
+        "wires": [
+            [
+                "7bc50211.98b8ec",
+                "fe68f81e.9c84c8"
+            ]
+        ]
+    },
+    {
+        "id": "93b38a5a.624228",
+        "type": "comment",
+        "z": "c1fbfd2b.c61d1",
+        "name": "cds",
+        "info": "",
+        "x": 170,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7bc50211.98b8ec",
+        "type": "ui_text",
+        "z": "c1fbfd2b.c61d1",
+        "group": "a757053b.5f7438",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "明暗センサー",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "43270357.60d76c",
+        "type": "comment",
+        "z": "c1fbfd2b.c61d1",
+        "name": "SW",
+        "info": "",
+        "x": 170,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b202f516.0fcd68",
+        "type": "comment",
+        "z": "c1fbfd2b.c61d1",
+        "name": "LED",
+        "info": "",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fe68f81e.9c84c8",
+        "type": "debug",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "1ffeaaa8.090495",
+        "type": "rpi-gpio in",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "pin": "26",
+        "intype": "down",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 200,
+        "y": 880,
+        "wires": [
+            [
+                "78449d34.2d39e4"
+            ]
+        ]
+    },
+    {
+        "id": "78449d34.2d39e4",
+        "type": "switch",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 880,
+        "wires": [
+            [
+                "1ca33cf7.15ce03"
+            ],
+            [
+                "ae561f95.b4c22"
+            ]
+        ]
+    },
+    {
+        "id": "1ca33cf7.15ce03",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "水平",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 860,
+        "wires": [
+            [
+                "ebd0ca36.0c0928",
+                "1b43f6b.3229909"
+            ]
+        ]
+    },
+    {
+        "id": "ae561f95.b4c22",
+        "type": "change",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "傾いてる",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "ebd0ca36.0c0928",
+                "1b43f6b.3229909"
+            ]
+        ]
+    },
+    {
+        "id": "5f7d41db.b0fa9",
+        "type": "comment",
+        "z": "c1fbfd2b.c61d1",
+        "name": "傾きセンサー",
+        "info": "",
+        "x": 190,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ebd0ca36.0c0928",
+        "type": "ui_text",
+        "z": "c1fbfd2b.c61d1",
+        "group": "a757053b.5f7438",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "傾きセンサー",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "1b43f6b.3229909",
+        "type": "debug",
+        "z": "c1fbfd2b.c61d1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "2e82c2de.0e9b7e",
+        "type": "ui_button",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "group": "27b1033b.cf626c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "測定開始",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "11f52cb9.403273"
+            ]
+        ]
+    },
+    {
+        "id": "563a3ec8.79f1f",
+        "type": "ui_text",
+        "z": "b0a69d1b.38d5e",
+        "group": "27b1033b.cf626c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "測定結果:",
+        "format": "{{msg.payload}} cm",
+        "layout": "row-spread",
+        "x": 920,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f18233c5.a51dc",
+        "type": "exec",
+        "z": "b0a69d1b.38d5e",
+        "command": "python3 /home/pi/sensorHAT/SR04_dataSave.py ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 200,
+        "wires": [
+            [
+                "5bdef9f9.716f38",
+                "563a3ec8.79f1f",
+                "25b3a4e.27fa35c",
+                "289948b1.8118c8"
+            ],
+            [
+                "353b2e23.0b8642"
+            ],
+            [
+                "783269a5.65bad8"
+            ]
+        ]
+    },
+    {
+        "id": "5bdef9f9.716f38",
+        "type": "debug",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "783269a5.65bad8",
+        "type": "debug",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "35ee702c.cff4c",
+        "type": "template",
+        "z": "b0a69d1b.38d5e",
+        "name": "測定中",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "測定中",
+        "output": "str",
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "563a3ec8.79f1f"
+            ]
+        ]
+    },
+    {
+        "id": "11f52cb9.403273",
+        "type": "delay",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [
+                "f18233c5.a51dc",
+                "35ee702c.cff4c",
+                "adc1d2a3.22ea2"
+            ]
+        ]
+    },
+    {
+        "id": "353b2e23.0b8642",
+        "type": "debug",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "25b3a4e.27fa35c",
+        "type": "switch",
+        "z": "b0a69d1b.38d5e",
+        "name": "emptyだったら",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "1b641337.a3143d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8260556a.7e5508",
+        "type": "inject",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 260,
+        "wires": [
+            [
+                "11f52cb9.403273"
+            ]
+        ]
+    },
+    {
+        "id": "1b641337.a3143d",
+        "type": "template",
+        "z": "b0a69d1b.38d5e",
+        "name": "タイムアウト",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "タイムアウト",
+        "output": "str",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "563a3ec8.79f1f",
+                "289948b1.8118c8"
+            ]
+        ]
+    },
+    {
+        "id": "86ba183f.f56ba8",
+        "type": "rpi-gpio out",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "pin": "27",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1140,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "718b59d9.38acd8",
+        "type": "inject",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 930,
+        "y": 440,
+        "wires": [
+            [
+                "86ba183f.f56ba8"
+            ]
+        ]
+    },
+    {
+        "id": "426d476b.768cc8",
+        "type": "inject",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 930,
+        "y": 520,
+        "wires": [
+            [
+                "86ba183f.f56ba8"
+            ]
+        ]
+    },
+    {
+        "id": "57f55ac8.cec5d4",
+        "type": "rpi-gpio out",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "pin": "17",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1140,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "21a58269.59849e",
+        "type": "inject",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 930,
+        "y": 580,
+        "wires": [
+            [
+                "57f55ac8.cec5d4"
+            ]
+        ]
+    },
+    {
+        "id": "dd0c7b56.dc2528",
+        "type": "inject",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 930,
+        "y": 660,
+        "wires": [
+            [
+                "57f55ac8.cec5d4"
+            ]
+        ]
+    },
+    {
+        "id": "adc1d2a3.22ea2",
+        "type": "template",
+        "z": "b0a69d1b.38d5e",
+        "name": "1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "1",
+        "output": "str",
+        "x": 670,
+        "y": 460,
+        "wires": [
+            [
+                "86ba183f.f56ba8"
+            ]
+        ]
+    },
+    {
+        "id": "289948b1.8118c8",
+        "type": "template",
+        "z": "b0a69d1b.38d5e",
+        "name": "0",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "86ba183f.f56ba8",
+                "c8094297.42bcb"
+            ]
+        ]
+    },
+    {
+        "id": "a95c9058.5f354",
+        "type": "inject",
+        "z": "b0a69d1b.38d5e",
+        "name": "起動時",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "289948b1.8118c8",
+                "e2373255.bef41"
+            ]
+        ]
+    },
+    {
+        "id": "61bb53c1.9bdc6c",
+        "type": "template",
+        "z": "b0a69d1b.38d5e",
+        "name": "1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "1",
+        "output": "str",
+        "x": 670,
+        "y": 600,
+        "wires": [
+            [
+                "57f55ac8.cec5d4"
+            ]
+        ]
+    },
+    {
+        "id": "e2373255.bef41",
+        "type": "template",
+        "z": "b0a69d1b.38d5e",
+        "name": "0",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 670,
+        "y": 640,
+        "wires": [
+            [
+                "57f55ac8.cec5d4"
+            ]
+        ]
+    },
+    {
+        "id": "c8094297.42bcb",
+        "type": "delay",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 600,
+        "wires": [
+            [
+                "61bb53c1.9bdc6c",
+                "aafb0101.dfced"
+            ]
+        ]
+    },
+    {
+        "id": "aafb0101.dfced",
+        "type": "delay",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "e2373255.bef41"
+            ]
+        ]
+    },
+    {
+        "id": "b9f1e5b6.4d3cf8",
+        "type": "exec",
+        "z": "b0a69d1b.38d5e",
+        "command": "sudo shutdown now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 1060,
+        "y": 780,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9843a516.fa4c68",
+        "type": "ui_button",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "group": "27b1033b.cf626c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "シャットダウン",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": " ",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 780,
+        "wires": [
+            [
+                "16286c70.1e4ff4"
+            ]
+        ]
+    },
+    {
+        "id": "16286c70.1e4ff4",
+        "type": "ui_toast",
+        "z": "b0a69d1b.38d5e",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": true,
+        "topic": "シャットダウンします？",
+        "name": "",
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "a2a76a1.9cfa498"
+            ]
+        ]
+    },
+    {
+        "id": "4c51a585.2805ec",
+        "type": "debug",
+        "z": "b0a69d1b.38d5e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "a2a76a1.9cfa498",
+        "type": "switch",
+        "z": "b0a69d1b.38d5e",
+        "name": "OKなら実行",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 780,
+        "wires": [
+            [
+                "4c51a585.2805ec",
+                "b9f1e5b6.4d3cf8"
+            ]
+        ]
+    },
+    {
+        "id": "7be5caf9.3e99a4",
+        "type": "ui_gauge",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "温 度",
+        "label": "units",
+        "format": "{{value}}度",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#1135e8",
+            "#28b888",
+            "#f21818"
+        ],
+        "seg1": "20",
+        "seg2": "28",
+        "className": "",
+        "x": 1430,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2017e6e5.c254ea",
+        "type": "ui_gauge",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "気 圧",
+        "label": "units",
+        "format": "{{value}}hPa",
+        "min": "900",
+        "max": "1040",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1430,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "80284fb8.34746",
+        "type": "ui_gauge",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "湿 度",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "600b5381.094a7c",
+        "type": "ui_slider",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "label": "　気圧　",
+        "tooltip": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 20,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "900",
+        "max": "1040",
+        "step": 1,
+        "x": 1030,
+        "y": 720,
+        "wires": [
+            [
+                "3068a971.64f5f6",
+                "2017e6e5.c254ea"
+            ]
+        ]
+    },
+    {
+        "id": "51216d62.b2e144",
+        "type": "ui_slider",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "label": "温度設定",
+        "tooltip": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "0",
+        "max": "40",
+        "step": "0.1",
+        "x": 1040,
+        "y": 600,
+        "wires": [
+            [
+                "7be5caf9.3e99a4",
+                "cb489fe5.0ee4d",
+                "dfa51ce9.97381",
+                "b4bb2490.e43b48"
+            ]
+        ]
+    },
+    {
+        "id": "6804f8b2.f5b8a8",
+        "type": "ui_slider",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "label": "湿度設定",
+        "tooltip": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 19,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "0",
+        "max": "100",
+        "step": 1,
+        "x": 1040,
+        "y": 660,
+        "wires": [
+            [
+                "80284fb8.34746",
+                "436addc1.0a6b24",
+                "f924dbe7.123ce8"
+            ]
+        ]
+    },
+    {
+        "id": "cb489fe5.0ee4d",
+        "type": "ui_chart",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "label": "気温トレンド",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1450,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "436addc1.0a6b24",
+        "type": "ui_chart",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "label": "湿度トレンド",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1450,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3068a971.64f5f6",
+        "type": "ui_chart",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "label": "気圧トレンド",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "950",
+        "ymax": "1035",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed92933d.34297",
+        "type": "ui_toast",
+        "z": "9a034a8c.ba9a58",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "topic": "グラフをリセットします。",
+        "name": "リセットダイアログ",
+        "x": 600,
+        "y": 920,
+        "wires": [
+            [
+                "b7be38ec.dd9408"
+            ]
+        ]
+    },
+    {
+        "id": "7e1a5548.41e93c",
+        "type": "inject",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "　",
+        "payloadType": "str",
+        "x": 410,
+        "y": 880,
+        "wires": [
+            [
+                "ed92933d.34297"
+            ]
+        ]
+    },
+    {
+        "id": "d504728d.44f5e",
+        "type": "ui_chart",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "label": "温度・湿度",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#4680aa",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#dd3431",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dfa51ce9.97381",
+        "type": "function",
+        "z": "9a034a8c.ba9a58",
+        "name": "topic 温度",
+        "func": "msg.topic = '温度'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 920,
+        "wires": [
+            [
+                "d504728d.44f5e"
+            ]
+        ]
+    },
+    {
+        "id": "f924dbe7.123ce8",
+        "type": "function",
+        "z": "9a034a8c.ba9a58",
+        "name": "topic 湿度",
+        "func": "msg.topic = '湿度'\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 960,
+        "wires": [
+            [
+                "d504728d.44f5e"
+            ]
+        ]
+    },
+    {
+        "id": "85bf8d46.f6f2d",
+        "type": "random",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "low": "900",
+        "high": "1040",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 820,
+        "wires": [
+            [
+                "5fec1292.1d42ec"
+            ]
+        ]
+    },
+    {
+        "id": "92ed03dd.59e92",
+        "type": "inject",
+        "z": "9a034a8c.ba9a58",
+        "name": "2秒周期",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 740,
+        "wires": [
+            [
+                "9f318775.82c918"
+            ]
+        ]
+    },
+    {
+        "id": "5fec1292.1d42ec",
+        "type": "smooth",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "8",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 580,
+        "y": 820,
+        "wires": [
+            [
+                "ace36748.f10868"
+            ]
+        ]
+    },
+    {
+        "id": "18f63fac.d59aa",
+        "type": "random",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "low": "0",
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 780,
+        "wires": [
+            [
+                "2bc8fada.7a1fd6"
+            ]
+        ]
+    },
+    {
+        "id": "2bc8fada.7a1fd6",
+        "type": "smooth",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "15",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 580,
+        "y": 780,
+        "wires": [
+            [
+                "6d179658.72efa8"
+            ]
+        ]
+    },
+    {
+        "id": "1b300651.02855a",
+        "type": "random",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "low": "0",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 740,
+        "wires": [
+            [
+                "235db628.2747ea"
+            ]
+        ]
+    },
+    {
+        "id": "235db628.2747ea",
+        "type": "smooth",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "5",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 580,
+        "y": 740,
+        "wires": [
+            [
+                "65ba00bc.499fe"
+            ]
+        ]
+    },
+    {
+        "id": "65ba00bc.499fe",
+        "type": "calculator",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "avg",
+        "constant": "",
+        "round": true,
+        "decimals": "1",
+        "x": 740,
+        "y": 740,
+        "wires": [
+            [
+                "51216d62.b2e144"
+            ]
+        ]
+    },
+    {
+        "id": "6d179658.72efa8",
+        "type": "calculator",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "trunc",
+        "constant": "",
+        "round": false,
+        "decimals": 0,
+        "x": 750,
+        "y": 780,
+        "wires": [
+            [
+                "6804f8b2.f5b8a8"
+            ]
+        ]
+    },
+    {
+        "id": "ace36748.f10868",
+        "type": "calculator",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "trunc",
+        "constant": "",
+        "round": false,
+        "decimals": 0,
+        "x": 750,
+        "y": 820,
+        "wires": [
+            [
+                "600b5381.094a7c"
+            ]
+        ]
+    },
+    {
+        "id": "b7be38ec.dd9408",
+        "type": "change",
+        "z": "9a034a8c.ba9a58",
+        "name": "グラフのリセット",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 920,
+        "wires": [
+            [
+                "cb489fe5.0ee4d",
+                "436addc1.0a6b24",
+                "3068a971.64f5f6",
+                "d504728d.44f5e"
+            ]
+        ]
+    },
+    {
+        "id": "a14c023.890f4",
+        "type": "inject",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 930,
+        "y": 820,
+        "wires": [
+            [
+                "51216d62.b2e144",
+                "6804f8b2.f5b8a8",
+                "600b5381.094a7c"
+            ]
+        ]
+    },
+    {
+        "id": "1ac0034f.ba8a9d",
+        "type": "inject",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 930,
+        "y": 860,
+        "wires": [
+            [
+                "51216d62.b2e144",
+                "6804f8b2.f5b8a8",
+                "600b5381.094a7c"
+            ]
+        ]
+    },
+    {
+        "id": "1f61bc20.4b8c74",
+        "type": "change",
+        "z": "9a034a8c.ba9a58",
+        "name": "sensorHAT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "folder",
+                "pt": "flow",
+                "to": "sensorHAT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f454b9e3.f5b408",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "user",
+        "info": "",
+        "x": 410,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "807482d7.03709",
+        "type": "change",
+        "z": "9a034a8c.ba9a58",
+        "name": "pi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "user",
+                "pt": "flow",
+                "to": "pi",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "1f61bc20.4b8c74"
+            ]
+        ]
+    },
+    {
+        "id": "10566eb.49ca691",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "folder",
+        "info": "",
+        "x": 570,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "97f67c2d.77bad",
+        "type": "inject",
+        "z": "9a034a8c.ba9a58",
+        "name": "起動時にファイルpathわ設定",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "807482d7.03709"
+            ]
+        ]
+    },
+    {
+        "id": "589b879d.791078",
+        "type": "file in",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "a5a7f699.b93d38"
+            ]
+        ]
+    },
+    {
+        "id": "cfaf6601.b644b8",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "temp_data_last.txt",
+        "field": "filename",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "/home/{{flow.user}}/{{flow.folder}}/temp_data_last.txt",
+        "output": "str",
+        "x": 290,
+        "y": 360,
+        "wires": [
+            [
+                "589b879d.791078"
+            ]
+        ]
+    },
+    {
+        "id": "7bb3a7d9.926828",
+        "type": "file in",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "4d676488.86a99c"
+            ]
+        ]
+    },
+    {
+        "id": "d66eaac5.0df368",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "humdy_data_last.txt",
+        "field": "filename",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "/home/{{flow.user}}/{{flow.folder}}/humdy_data_last.txt",
+        "output": "str",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "7bb3a7d9.926828"
+            ]
+        ]
+    },
+    {
+        "id": "49ee03c9.1cc20c",
+        "type": "file in",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 530,
+        "y": 460,
+        "wires": [
+            [
+                "9a6062ec.16447"
+            ]
+        ]
+    },
+    {
+        "id": "9c3e3807.e17f78",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "press_data_last.txt",
+        "field": "filename",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "/home/{{flow.user}}/{{flow.folder}}/press_data_last.txt",
+        "output": "str",
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "49ee03c9.1cc20c"
+            ]
+        ]
+    },
+    {
+        "id": "b99f50d8.e4646",
+        "type": "ui_button",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "グラフのリセット",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 190,
+        "y": 920,
+        "wires": [
+            [
+                "28439ac6.b5d746"
+            ]
+        ]
+    },
+    {
+        "id": "9f318775.82c918",
+        "type": "ui_switch",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "label": "ダミーデータを使用",
+        "tooltip": "",
+        "group": "fbd4bf9a.0a02c",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 180,
+        "y": 780,
+        "wires": [
+            [
+                "db17bffb.97de8"
+            ]
+        ]
+    },
+    {
+        "id": "db17bffb.97de8",
+        "type": "switch",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 820,
+        "wires": [
+            [
+                "1b300651.02855a",
+                "18f63fac.d59aa",
+                "85bf8d46.f6f2d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a417c1c0.bf9f1",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "周期的にファイルからデータを読み込む",
+        "info": "",
+        "x": 320,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ca5efd6a.f31af",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "ダミーデータを使い表示を確認する",
+        "info": "",
+        "x": 460,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "36a9dcb2.8b0434",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "複数要素のグラフを描画",
+        "info": "",
+        "x": 1410,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "b4bb2490.e43b48",
+        "type": "mqtt out",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "topic": "testmqtt/sensor/temp999",
+        "qos": "0",
+        "retain": "",
+        "broker": "724182e9.49bcdc",
+        "x": 1490,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a5a7f699.b93d38",
+        "type": "calculator",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "10",
+        "round": true,
+        "decimals": "1",
+        "x": 950,
+        "y": 340,
+        "wires": [
+            [
+                "7be5caf9.3e99a4",
+                "cb489fe5.0ee4d",
+                "dfa51ce9.97381",
+                "b4bb2490.e43b48"
+            ]
+        ]
+    },
+    {
+        "id": "28439ac6.b5d746",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "　",
+        "output": "str",
+        "x": 380,
+        "y": 920,
+        "wires": [
+            [
+                "ed92933d.34297"
+            ]
+        ]
+    },
+    {
+        "id": "173f4f36.9f8bd1",
+        "type": "delay",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "c70379c8.9d2b28"
+            ]
+        ]
+    },
+    {
+        "id": "e03b59be.aeec88",
+        "type": "file",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "filename": "/home/pi/sensorHAT/temp_data_last.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 740,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6677c22.dfbaa",
+        "type": "file",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "filename": "/home/pi/sensorHAT/humdy_data_last.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 760,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8aa7291a.6b77f8",
+        "type": "file",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "filename": "/home/pi/sensorHAT/press_data_last.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 780,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1dd53c6.85b37c4",
+        "type": "delay",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.7",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "ea6fde72.3dcbe"
+            ]
+        ]
+    },
+    {
+        "id": "22ec2cd0.110be4",
+        "type": "delay",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.6",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "1478d3e4.1b6f6c"
+            ]
+        ]
+    },
+    {
+        "id": "c70379c8.9d2b28",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "0",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "e03b59be.aeec88"
+            ]
+        ]
+    },
+    {
+        "id": "1478d3e4.1b6f6c",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "0",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 510,
+        "y": 600,
+        "wires": [
+            [
+                "e6677c22.dfbaa"
+            ]
+        ]
+    },
+    {
+        "id": "ea6fde72.3dcbe",
+        "type": "template",
+        "z": "9a034a8c.ba9a58",
+        "name": "0",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 530,
+        "y": 640,
+        "wires": [
+            [
+                "8aa7291a.6b77f8"
+            ]
+        ]
+    },
+    {
+        "id": "ac5248a4.de21b8",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "データ欠損時にデータを0にする",
+        "info": "",
+        "x": 350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a2df23ca.224d3",
+        "type": "inject",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1210,
+        "y": 280,
+        "wires": [
+            [
+                "7be5caf9.3e99a4",
+                "80284fb8.34746",
+                "2017e6e5.c254ea"
+            ]
+        ]
+    },
+    {
+        "id": "4d676488.86a99c",
+        "type": "calculator",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "1",
+        "round": true,
+        "decimals": "1",
+        "x": 950,
+        "y": 400,
+        "wires": [
+            [
+                "80284fb8.34746",
+                "436addc1.0a6b24",
+                "f924dbe7.123ce8"
+            ]
+        ]
+    },
+    {
+        "id": "9a6062ec.16447",
+        "type": "calculator",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "1",
+        "round": true,
+        "decimals": "1",
+        "x": 950,
+        "y": 460,
+        "wires": [
+            [
+                "2017e6e5.c254ea",
+                "3068a971.64f5f6"
+            ]
+        ]
+    },
+    {
+        "id": "436d0929.915cb8",
+        "type": "watch",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "files": "/home/pi/sensorHAT/press_data_last.txt",
+        "recursive": "",
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "919e82.9a52c18",
+                "8be7698c.95fb88"
+            ]
+        ]
+    },
+    {
+        "id": "331c5b5.7653fa4",
+        "type": "watch",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "files": "/home/pi/sensorHAT/temp_data_last.txt",
+        "recursive": "",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "919e82.9a52c18",
+                "8be7698c.95fb88"
+            ]
+        ]
+    },
+    {
+        "id": "919e82.9a52c18",
+        "type": "delay",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "50",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "4d66209e.3f8ed"
+            ]
+        ]
+    },
+    {
+        "id": "4d66209e.3f8ed",
+        "type": "delay",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "40",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 220,
+        "wires": [
+            [
+                "cfaf6601.b644b8",
+                "d66eaac5.0df368",
+                "9c3e3807.e17f78",
+                "ea0e9ffc.43cb3"
+            ]
+        ]
+    },
+    {
+        "id": "8be7698c.95fb88",
+        "type": "debug",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9fff10b3.5c767",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "データファイルに変化があれば、それをキックにフローを流す",
+        "info": "",
+        "x": 290,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ea0e9ffc.43cb3",
+        "type": "trigger",
+        "z": "9a034a8c.ba9a58",
+        "name": "Watchdog",
+        "op1": "",
+        "op2": "timeout",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "2",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 910,
+        "y": 220,
+        "wires": [
+            [
+                "c96b5379.6c629",
+                "cfaf6601.b644b8",
+                "d66eaac5.0df368",
+                "9c3e3807.e17f78"
+            ]
+        ]
+    },
+    {
+        "id": "c96b5379.6c629",
+        "type": "debug",
+        "z": "9a034a8c.ba9a58",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1130,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6b566de1f0345a0f",
+        "type": "comment",
+        "z": "9a034a8c.ba9a58",
+        "name": "データ欠損時処理を止めています。",
+        "info": "",
+        "x": 380,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "727a0a82.432964",
+        "type": "ui_text",
+        "z": "e7701550.2a9938",
+        "group": "6907d453.6cadfc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "受信データ：",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 780,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b4b5c38a.d04a7",
+        "type": "comment",
+        "z": "e7701550.2a9938",
+        "name": "適当なリモコンのボタンを押して...",
+        "info": "適当なリモコンのボタンを押してみると\n0101といった数字が出ます。\n押したボタンと0101をどこかに書き留めます。\nその0101をswicthフローで判定すると\n押したボタンを判別できるようにになります。\n\nリモコンによっては信号の時間幅が違いデータを取得で\nきない場合があるので、別のリモコンで試してください。\n\n信号の時間は幅を調整するには\nirrp_data_code04.py\nの294行あたりを改造するとできます。\n\nリモコンの信号は短い幅と長い幅で０と1を区別する\n仕組みです。\n1の幅は０の幅のおおむね3倍程度となっています。\n\n",
+        "x": 270,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bf28c39d75f814de",
+        "type": "file in",
+        "z": "e7701550.2a9938",
+        "name": "",
+        "filename": "/home/pi/sensorHAT/iR_command.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "727a0a82.432964",
+                "50bc120a7f302158"
+            ]
+        ]
+    },
+    {
+        "id": "50bc120a7f302158",
+        "type": "debug",
+        "z": "e7701550.2a9938",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "355caa635b790c06",
+        "type": "watch",
+        "z": "e7701550.2a9938",
+        "name": "",
+        "files": "/home/pi/sensorHAT/iR_command.txt ",
+        "recursive": "",
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "bf28c39d75f814de",
+                "8726d694af3a60b1"
+            ]
+        ]
+    },
+    {
+        "id": "59f5017e1d4705a8",
+        "type": "ui_text",
+        "z": "e7701550.2a9938",
+        "group": "6907d453.6cadfc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "赤外線リモコンの信号を '1'  '0' で表示します。",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 320,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8726d694af3a60b1",
+        "type": "debug",
+        "z": "e7701550.2a9938",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 120,
+        "wires": []
+    }
+]
