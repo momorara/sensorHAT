@@ -1,0 +1,47 @@
+ambient対応にするために
+
+まずは、
+https://ambidata.io/
+ambientのHPでユーザー登録をしてください。
+またambientのサービスについて、概要を確認ください。
+
+ログインすると、チャンネル一覧のページが出ます。
+ここで、チャンネルを作るを選択して、チャンネルを作ってください。
+
+設定でお好きな名前を設定してください。
+できたチャンネルのチャネルIDとライトキーを使います。
+
+
+次にラズパイでの操作です。
+https://github.com/momorara/sensorHATから必要なファイルを取得していただきます。
+プログラム　
+設定ファィル config.ini
+
+この２つのファィルをラズパイのディレクトリsensorHATへコピーしてください。
+
+次にconfig.iniの変更です。
+
+config.iniを開いて、ambientのチャネルIDとライトキーをコピーしてください。
+
+最後にambientライブラリのインストールです。
+ラズパイのpiディレクトリで
+pip3 install git+https://github.com/AmbientDataInc/ambient-python-lib.git
+としてください。
+
+プログラムの実行は
+ディレクトリsensorHATで
+python3    .py
+としてください。
+
+これで、ambientへデータを1分毎に送信するはずです。
+ambientでグラフの見た目などをお好みで編集してください。
+
+ラズパイ起動時に本機能を稼働させる場合は、
+cronへの登録を行います。
+
+crontab -e
+として
+@reboot sleep 30 && python3 /home/pi/sensorHAT/:::.py
+を登録してください。
+
+
