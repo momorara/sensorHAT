@@ -12,6 +12,7 @@ by.kawabata
 2021/03/11  調整  
 2021/03/13  温度データをファィルに書き込む 使用しないので、コメントとする
 2022/12/04  補正値の整備
+2023/02/19  精度追求
 
 
 scp -r sensorHAT pi@192.168.68.108:/home/pi
@@ -31,21 +32,21 @@ import Adafruit_BMP.BMP085 as BMP085
 
 try:
     sensor = BMP085.BMP085()
-    press = int((sensor.read_pressure()+ 50)/ 100 )
+    press = ((sensor.read_pressure()+ 50)/ 100 )
 except:
     try:
         time.sleep(1)
         sensor = BMP085.BMP085()
-        press = int((sensor.read_pressure()+ 50)/ 100 )
+        press = ((sensor.read_pressure()+ 50)/ 100 )
     except:
         try:
             time.sleep(1.5)
             sensor = BMP085.BMP085()
-            press = int((sensor.read_pressure()+ 50)/ 100 )
+            press = ((sensor.read_pressure()+ 50)/ 100 )
         except:
             time.sleep(3)
             sensor = BMP085.BMP085()
-            press = int((sensor.read_pressure()+ 50)/ 100 )
+            press = ((sensor.read_pressure()+ 50)/ 100 )
 
 
 print('測定値',end='', flush=True)
@@ -56,6 +57,10 @@ print(hosei)
 
 print('補正後',end='', flush=True)
 press = press + hosei
+print('Pressure = ',press,'hPa' )
+
+print('補正後int ',end='', flush=True)
+press = int(press + 0.5)
 print('Pressure = ',press,'hPa' )
 
 
