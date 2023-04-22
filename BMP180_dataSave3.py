@@ -2,7 +2,6 @@
 #!/usr/bin/python
 """
 BMPセンサーから気圧情報をとりだし、ファイル保存する
-
 press_data.txt
 BMP180_dataSave.py  python2で実行のこと
 BMP180_dataSave3.py  python3で実行のこと
@@ -13,12 +12,7 @@ by.kawabata
 2021/03/13  温度データをファィルに書き込む 使用しないので、コメントとする
 2022/12/04  補正値の整備
 2023/02/19  精度追求
-
-
-scp -r sensorHAT pi@192.168.68.108:/home/pi
-scp -r sensorHAT/*.py pi@192.168.68.126:/home/pi/sensorHAT
 """
-
 # 補正値
 hosei = 0
 
