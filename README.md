@@ -9,3 +9,5 @@ git clone https://github.com/momorara/sensorHAT
 ただし、報告していただければ、可能な範囲で改修対応いたします。
 
 資料は、説明文書・図面フォルダにあります。
+
+2023/04/22　OS11.6で確認
